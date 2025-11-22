@@ -1,0 +1,112 @@
+/* Garante que o html e body ocupem a altura total e remove margens padrão */
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; /* Adicione uma fonte mais moderna se desejar */
+}
+
+body {
+    background-color: var(--light-background); /* Aplica o fundo escuro ao body */
+}
+
+/* Definição das variáveis de cor */
+:root {
+    --primary-purple: #6a0dad; /* Roxo principal para destaque */
+    --secondary-blue: #1a237e; /* Azul escuro para o fundo do container */
+    --light-background: #37375a; /* Fundo claro para o corpo da página */
+    --form-background: #ffffff; /* Fundo branco para o formulário */
+    --text-color: #333333; /* Cor de texto padrão */
+    --border-color: #cccccc; /* Cor da borda dos inputs */
+}
+
+/* Estilização básica do container */
+.payment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--light-background); /* Fundo da tela */
+    padding: 20px;
+}
+
+/* Estilização do formulário */
+.payment-form {
+    background-color: var(--form-background);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Limita a largura para melhor visualização */
+    border-top: 5px solid var(--primary-purple); /* Detalhe roxo no topo */
+}
+
+.form-title {
+    color: var(--secondary-blue); /* Título em azul escuro */
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Grupos de Input */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-sizing: border-box; /* Garante que padding e border estejam dentro da largura */
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Foco nos Inputs */
+.input-group input:focus {
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.2); /* Sombra roxa suave */
+    outline: none;
+}
+
+/* Linha para campos lado a lado (Validade e CVV) */
+.input-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.input-row .half-width {
+    flex: 1; /* Faz com que ambos ocupem metade do espaço disponível */
+}
+
+/* Estilização do Botão de Submissão */
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-purple); /* Fundo roxo */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.submit-button:hover {
+    background-color: #580894; /* Roxo um pouco mais escuro no hover */
+}
+
+.submit-button:active {
+    transform: translateY(1px); /* Efeito de clique */
+}
